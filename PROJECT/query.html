@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<style type="text/css">
+.frm1{
+position:absolute:
+background:lightblue;
+width:340px;
+padding:10px;
+}
+.register
+{
+background:blue;
+border:#345b36 2px;
+color:white;
+margin:2px 3px;
+padding:14px 17px;
+border-radius:10px 10px;
+z-index:2;
+font-size:15px;
+}
+.inp{
+width:300px;
+height:30px;
+font-size:15px;
+font-family: 'Voces', cursive;
+font-style: italic;
+}
+.d{color:red;}
+.img
+{
+position:absolute;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+overflow:hidden;
+}
+.f{color:white;
+z-index:3;
+}
+.g
+{
+font-family: 'Voces', cursive;
+position:absolute;
+font-style: italic;
+top:3%;
+left:8%;
+color:white;
+font-size:50px;
+z-index:1;
+}
+.in{
+width:90%;
+}
+.h{
+position:absolute;
+top:10%;
+
+}
+.frm1{margin:5px;}
+.ff{position:absolute;
+top:20%;
+left:10%;
+background:#6a3b07;
+}
+</style>
+<script>
+function f()
+{
+var user=document.getElementById("u");
+var con=document.getElementById("oc");
+var email=document.getElementById("ei");
+var occu=document.getElementById("q");
+if(user.value.length==0||email.value.length==0||occu.value.length==0||con.value.length==0)
+{
+alert("Data is not sufficient to submit a query");
+}
+else
+{
+alert("Thank you submission we will contact you as soon as possible");
+var frm=document.getElementById("frm1");
+frm.setAttribute("action","data.php");
+}
+}
+</script>
+</head>
+<body>
+<img src="qer.jpg" class="img"/>
+
+<div class="ff">
+<form method="post" action="" id="frm1"class="frm1">
+
+Enter the User:&nbsp&nbsp<br><input type="textbox" name="user"  class="inp" id="u" placeholder="Enter the Name"/><span class="d">*</span><br><br>
+	
+
+Enter the E-mail Id:&nbsp&nbsp<br><input type="textbox" name="mailid" class="inp" id="ei" placeholder="Enter the EmailID"/><span class="d">*</span><br><br>
+Enter the Phone:<br><input type="textbox" name="phone" class="inp" id="oc" placeholder="Enter the Phone"/><span class="d">*</span><br><br>
+Enter the query:<br><textarea name="query" class="in" id="q" placeholder="Enter the query"></textarea><span class="d">*</span><br><br>
+<span class="d"><span class="d">*</span>specifies manditory feilds</span><br><br>
+&nbsp&nbsp<input type="submit" name="register" value="submit" class="register" class="inp " onclick="f();"/>
+&nbsp&nbsp&nbsp<input type="reset" name="register" value="clear" class="register"/>
+</form>
+</div>
+
+</body>
+</html>
